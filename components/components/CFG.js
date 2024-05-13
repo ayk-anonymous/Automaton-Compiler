@@ -15,7 +15,7 @@ import {
 const CFG = ({ prob2 }) => {
   return (
     <>
-      <Popover isLazy placement="top">
+      <Popover isLazy placement="bottom">
         <PopoverTrigger>
           <Button mx="2">Show CFG</Button>
         </PopoverTrigger>
@@ -25,24 +25,29 @@ const CFG = ({ prob2 }) => {
           bg="gray.50"
           fontSize={["0.7em", "0.7em", "0.9em"]}
         >
-          <PopoverArrow />
-          <PopoverCloseButton />
-          <PopoverHeader fontWeight="semibold">
+          <PopoverArrow bg="gray.800" />
+          <PopoverCloseButton mt="2px" color="white" bg="gray.800" _hover={{ bg:"white", color: "gray.800" }} />
+          <PopoverHeader fontWeight="semibold" color="black">
             Context-free Grammar
           </PopoverHeader>
-          <PopoverBody align="center">
+          <PopoverBody align="center" fontWeight="semibold" color="black">
             {!prob2 ? (
               <VStack>
-                <Text>{"S -> abaX | babX"}</Text>
-                <Text>{"X -> aX | bX | babY"}</Text>
-                <Text>{"Y -> aZ | bZ"}</Text>
-                <Text>{"Z -> aZ | bZ | aaZ | ^"}</Text>
+                <Text>{"S -> aaA | bbA"}</Text>
+                <Text>{"A -> aB | bB | B"}</Text>
+                <Text>{"B -> aC | bC | abC | baC"}</Text>
+                <Text>{"C -> aD | bD | abD | baD | D"}</Text>
+                <Text>{"D -> aaE | babE | E"}</Text>
+                <Text>{"E -> aF | bF | aaF"}</Text>
+                <Text>{"F -> aF | bF | bbF | aaF| ^"}</Text>
               </VStack>
             ) : (
               <VStack>
-                <Text>{"S -> 1X | 0X"}</Text>
-                <Text>{"X -> 1X | 0X | 111Y | 000Y | 101Y"}</Text>
-                <Text>{"Y -> 1Y | 0X | ^"}</Text>
+                <Text>{"S -> A"}</Text>
+                <Text>{"A -> 101B | 111AB | 100B | 1AB | 0AB | 11AB | ^"}</Text>
+                <Text>{"B -> 1BC | 0BC | 01BC | ^"}</Text>
+                <Text>{"C -> 111D | 000D | 101D"}</Text>
+                <Text>{"D -> 1D | 0D | ^"}</Text>
               </VStack>
             )}
           </PopoverBody>
