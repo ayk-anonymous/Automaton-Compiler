@@ -4,7 +4,6 @@ import { CgChevronRight } from "react-icons/cg";
 
 import FirstDFA from "../DFA/FirstDFA";
 import SecondDFA from "../DFA/SecondDFA";
-import CFG from "./CFG";
 
 const RightBox = ({
   prob2,
@@ -24,8 +23,10 @@ const RightBox = ({
         <Flex
           h={["12em", null, "18em", null, null, "18em"]}
           pos="relative"
-          borderBottom="solid 1px"
-          borderColor="gray.200"
+          border="solid 5px"
+          borderRadius="25px"
+          borderColor="gray.800"
+          mb="10px"
         >
           {!prob2 ? (
             <FirstDFA currentNode={currentNode} simulating={simulating} />
@@ -46,7 +47,6 @@ const RightBox = ({
             Regular Expression: <Tag as="span">{!prob2 ? regex1 : regex2}</Tag>
           </Heading>
           <Flex>
-            <CFG prob2={prob2} />
             <Button
               disabled={simulating}
               onClick={handleSwitch}
