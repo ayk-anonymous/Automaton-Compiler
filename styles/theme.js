@@ -20,8 +20,8 @@ export const theme = extendTheme({
     }),
   },
   config: {
-    initialColorMode: "dark",
-    useSystemColorMode: false,
+    initialColorMode: "light",
+    useSystemColorMode: true,
   },
   textStyles: {
     Primary: {
