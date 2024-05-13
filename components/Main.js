@@ -6,9 +6,8 @@ import LeftBox from "./components/LeftBox";
 import RightBox from "./components/RightBox";
 
 const Main = () => {
-  const regex1 = "(aba+bab) (a+b)* (bab) (a+b)* (a+b+ab+ba) (a+b)*";
-  const regex2 = "((101+111+101)+(1+0+11)) (1+0+01)* (111+000+101) (1+0)*";
-
+  const regex1 = "(aa+bb)(a+b)(a+b+ab+ba)(a+b+ab+ba)(aa+bab)(a+b+aa)(a+b+bb+aa)*";
+  const regex2 = "((101)+(111)*+(100)+(1+0+11)*)(1+0+01)*(111+000+101)(1+0)*";
   const [string, setString] = useState("");
   const [data, setData] = useState("");
   const [count, setCount] = useState(0);
@@ -151,12 +150,12 @@ const Main = () => {
           setTimeout(() => {
             setCurrentNode(node);
             node == pathWithZeroes[pathWithZeroes.length - 2] &&
-            !pathWithZeroes.includes("T") &&
-            !pathWithZeroes.includes("eos")
+              !pathWithZeroes.includes("T") &&
+              !pathWithZeroes.includes("eos")
               ? handleValid()
               : node == "T" && pathWithZeroes.slice(-4)[0] == "T"
-              ? handleTrapped()
-              : pathWithZeroes.slice(-4)[3 - 1] == node &&
+                ? handleTrapped()
+                : pathWithZeroes.slice(-4)[3 - 1] == node &&
                 !pathWithZeroes.includes("T") &&
                 handleShort();
           }, i * 200);
@@ -180,7 +179,7 @@ const Main = () => {
           setTimeout(() => {
             setCurrentNode(node);
             node == pathWithZeroes[pathWithZeroes.length - 2] &&
-            !pathWithZeroes.includes("eos")
+              !pathWithZeroes.includes("eos")
               ? handleValid()
               : pathWithZeroes.slice(-4)[3 - 1] == node && handleShort();
           }, i * 200);
@@ -193,10 +192,7 @@ const Main = () => {
   };
 
   return (
-    <Flex
-      direction={["column", "column", "column", "column", "column", "row"]}
-      align="center"
-    >
+    <Flex direction="column" align="center">
       <LeftBox
         handleTest={handleTest}
         data={data}
@@ -209,11 +205,6 @@ const Main = () => {
         count={count}
         regex1={regex1}
         regex2={regex2}
-      />
-      <Divider
-        display={["block", null, "block", null, null, "none"]}
-        mt="6"
-        mb="2"
       />
       <RightBox
         prob2={prob2}
