@@ -4,7 +4,7 @@ export const Badge = {
   },
   sizes: {
     node: {
-      bg: "gray.700",
+      bg: "green.900",
       color: ["gray.200", null, "gray.200"],
 
       // h: ["2em", "2em", "3.5em", "3.5em"],
@@ -35,115 +35,81 @@ export const Badge = {
       top: "50%",
       left: "10%",
 
-      borderColor: "blue.300",
+      borderColor: "yellow.600",
     },
     q2: {
       top: "20%",
-      left: "20%",
+      left: "30%",
 
-      borderColor: "orange.300",
+      borderColor: "yellow.600",
     },
     q3: {
-      top: "20%",
-      left: "40%",
-
-      borderColor: "purple.300",
+      top: "80%",
+      left: "30%",
+      borderColor: "yellow.600",
     },
     q4: {
-      top: "80%",
-      left: "20%",
+      top: "50%",
+      left: "50%",
 
-      borderColor: "orange.300",
+      borderColor: "yellow.600",
     },
     q5: {
-      top: "80%",
-      left: "40%",
+      top: "50%",
+      left: "68%",
 
-      borderColor: "purple.300",
+      borderColor: "yellow.600",
     },
     q6: {
       top: "50%",
-      left: "50%",
-
-      borderColor: "orange.300",
+      left: "86%",
+      borderColor: "yellow.600",
     },
-    q7: {
-      top: "20%",
-      left: "60%",
 
-      borderColor: "orange.300",
-    },
-    q8: {
-      top: "80%",
-      left: "60%",
-
-      borderColor: "orange.300",
-    },
-    q9: {
-      top: "50%",
-      left: "70%",
-
-      borderColor: "purple.300",
-    },
-    q10: {
-      top: "50%",
-      left: "90%",
-
-      borderColor: "teal.300",
-    },
     T: {
       top: "50%",
       left: "30%",
-
-      borderColor: "pink.300",
+      borderColor: "yellow.600",
     },
     1: {
       top: "15%",
-      left: "70%",
-
-      borderColor: "orange.300",
+      left: "50%",
+      borderColor: "yellow.600",
     },
     2: {
       top: "50%",
-      left: "70%",
-
-      borderColor: "purple.300",
+      left: "50%",
+      borderColor: "yellow.600",
     },
     3: {
       top: "85%",
-      left: "70%",
-
-      borderColor: "orange.300",
+      left: "50%",
+      borderColor: "yellow.600",
     },
     4: {
       top: "50%",
-      left: "50%",
-
-      borderColor: "orange.300",
+      left: "30%",
+      borderColor: "yellow.600",
     },
     5: {
       top: "50%",
-      left: "90%",
-
-      borderColor: "teal.300",
+      left: "70%",
+      borderColor: "yellow.600",
     },
     6: {
       top: "85%",
-      left: "50%",
-
-      borderColor: "purple.300",
+      left: "30%",
+      borderColor: "yellow.600",
     },
     7: {
       top: "50%",
-      left: "30%",
-
-      borderColor: "purple.300",
+      left: "10%",
+      borderColor: "yellow.600",
     },
     8: {
       top: "50%",
       left: "10%",
-
-      borderColor: "blue.300",
+      borderColor: "yellow.600",
     },
   },
   defaultProps: {
