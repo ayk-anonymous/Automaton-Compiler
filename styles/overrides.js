@@ -28,6 +28,19 @@ export const Button = {
       bg: "none",
       _hover: "",
       fontSize: ["0.7em", "0.7em", "0.9em"],
+      bg: "red.300",
+    },
+    validate: {
+      bg: "none",
+      _hover: "",
+      fontSize: ["0.7em", "0.7em", "0.9em"],
+      bg: "green.300",
+    },
+    simulate: {
+      bg: "none",
+      _hover: "",
+      fontSize: ["0.7em", "0.7em", "0.9em"],
+      bg: "orange.300",
     },
   },
   defaultProps: {
