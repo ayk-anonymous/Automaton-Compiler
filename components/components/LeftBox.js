@@ -46,31 +46,6 @@ const LeftBox = ({
 
         <Box>
           <form onSubmit={handleTest}>
-            {/* <Flex align="center">
-              <Heading>Input String:</Heading>
-              <Flex align="center">
-                {data && (
-                  <Button
-                    variant="data"
-                    rightIcon={
-                      data.result == "Valid" ? (
-                        <Box color="teal.300">
-                          <FaCheck />
-                        </Box>
-                      ) : (
-                        data.result == "Invalid" && (
-                          <Box color="pink.300">
-                            <ImCross />
-                          </Box>
-                        )
-                      )
-                    }
-                  >
-                    {data.result}
-                  </Button>
-                )}
-              </Flex>
-            </Flex> */}
             {data &&
               data.map((result, index) => (
                 <Box key={index}>
