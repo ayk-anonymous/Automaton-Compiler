@@ -46,7 +46,7 @@ const LeftBox = ({
 
         <Box>
           <form onSubmit={handleTest}>
-            <Flex align="center">
+            {/* <Flex align="center">
               <Heading>Input String:</Heading>
               <Flex align="center">
                 {data && (
@@ -70,7 +70,47 @@ const LeftBox = ({
                   </Button>
                 )}
               </Flex>
-            </Flex>
+            </Flex> */}
+            {data &&
+              data.map((result, index) => (
+                <Box key={index}>
+                  <Flex align="center">
+                    <Heading>Input String {index + 1}:</Heading>
+                    <Flex align="center">
+                      <Button
+                        variant="data"
+                        rightIcon={
+                          result.result === "Valid" ? (
+                            <Box color="teal.300">
+                              <FaCheck />
+                            </Box>
+                          ) : (
+                            result.result === "Invalid" && (
+                              <Box color="pink.300">
+                                <ImCross />
+                              </Box>
+                            )
+                          )
+                        }
+                      >
+                        {result.result}
+                      </Button>
+                      <Button
+                        variant="simulate"
+                        isLoading={simulating}
+                        loadingText="simulating..."
+                        spinnerPlacement="start"
+                        onClick={() => handleSimulation(index)}
+                        ml={2}
+                        disabled={simulating}
+                      >
+                        Simulate
+                      </Button>
+                    </Flex>
+                  </Flex>
+                  <Text>{result.input}</Text>
+                </Box>
+              ))}
             <InputGroup>
               <Input
                 maxLength="100"
@@ -93,17 +133,6 @@ const LeftBox = ({
               <Flex>
                 <Button type="submit" variant="validate" disabled={simulating}>
                   Validate
-                </Button>
-                <Button
-                  variant="simulate"
-                  isLoading={simulating}
-                  loadingText="simulating..."
-                  spinnerPlacement="start"
-                  onClick={handleSimulation}
-                  ml={2}
-                  disabled={simulating}
-                >
-                  Simulate
                 </Button>
                 <Button variant="clear" onClick={handleReset} disabled={simulating} ml={2}>
                   Clear
