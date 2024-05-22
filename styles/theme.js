@@ -3,8 +3,8 @@ import { Button, Heading, Tag, Flex, Input, Text } from "./overrides";
 import { Badge } from "./badgeStyles";
 export const theme = extendTheme({
   fonts: {
-    body: 'Montserrat', 
-    heading: 'Montserrat', 
+    heading: `'Montserrat', sans-serif`,
+    body: `'Montserrat', sans-serif`,
   },
   styles: {
     global: (props) => ({
@@ -20,7 +20,7 @@ export const theme = extendTheme({
     }),
   },
   config: {
-    initialColorMode: "dark",
+    initialColorMode: "dark"
   },
   textStyles: {
     Primary: {
